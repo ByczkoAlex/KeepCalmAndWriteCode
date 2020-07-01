@@ -20,13 +20,13 @@ export function MyPosts(props: MyPostsType) {
         if (NewPostElement.current)
             // НЕ РАБОТАЕТ ЭДД ПОСТ
         props.postMessage (NewPostElement.current.value);
-        props.updateNewPostText('')
+        props.updateNewPostText("")
     };
     // ЗАНУЛИТЬ ТЕКСТ В ИНПУТЕ ПОСЛЕ ОТРАБОТКИ ФУНКЦИИ !!!!
 
     let onPostChange = () => {
         if (NewPostElement.current)
-        props.updateNewPostText(NewPostElement.current.value)
+        props.updateNewPostText(NewPostElement.current.value);
     };
 
     return (

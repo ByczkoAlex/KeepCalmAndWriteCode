@@ -1,4 +1,6 @@
-import {rerenderTree} from "../render";
+let rerenderTree = () => {
+    console.log("state is changed")
+};
 
 export type MessageType = {
     id: number
@@ -66,13 +68,17 @@ export const addPost = () => {
         likes: "0"
     };
     state.profilePage.postsData.unshift(newPost);
-    rerenderTree(state);
+    rerenderTree();
+};
+
+export const subscribe = (observer : any) => {   // ЧТО ВМЕСТО ANY?
+    rerenderTree = observer
 };
 
 
 export const updateNewPostText = (newText: string) => {
     state.profilePage.newPostText = newText;
-    rerenderTree(state);
+    rerenderTree();
 };
 
 
