@@ -1,8 +1,10 @@
-import React, {ButtonHTMLAttributes, ChangeEvent, DetailedHTMLProps, InputHTMLAttributes, useState} from 'react';
+import React, {ChangeEvent, useState} from 'react';
 import s from './Hi.module.css'
 import {InputNya} from "../../common/inputNya";
 import {ButtonNya} from "../../common/buttonNya";
 import {v1} from "uuid";
+import {Checkbox} from "../../common/checkbox";
+import {Container, Grid, Paper} from "@material-ui/core";
 
 export function Hello() {
 
@@ -19,29 +21,53 @@ export function Hello() {
     };
 
     const onTitleChange = (e: ChangeEvent<HTMLInputElement>) => setTitle(e.currentTarget.value);
-    const onKeyPressSayHello = (e: React.KeyboardEvent<HTMLButtonElement> |  React.KeyboardEvent<HTMLInputElement>) => {
-       debugger
-            sayHello()
+    const onKeyPressSayHello = (e: React.KeyboardEvent<HTMLButtonElement> | React.KeyboardEvent<HTMLInputElement>) => {
+    debugger
+        sayHello()
     };
 
 
     return (
         <div className={s.wrapper}>
-            <div>
-                <div><InputNya
-                    onTitleChange={onTitleChange}
-                    onKeyPressSayHello={onKeyPressSayHello}
-                /></div>
-                <div><ButtonNya
-                    onKeyPressSayHello={onKeyPressSayHello}
-                /></div>
-                <div><span></span></div>
-            </div>
-            <div>
-                {
-                    people.map(el => <div>{el.name}</div>)
-                }
-            </div>
+            <Container fixed>
+                <Grid>
+                    <div>
+                        <Grid container xs={3}>
+                            <Paper>
+                                <div><InputNya
+                                    onTitleChange={onTitleChange}
+                                    onKeyPressSayHello={onKeyPressSayHello}
+                                /></div>
+                            </Paper>
+                        </Grid>
+
+                        <Grid container xs={3}>
+                            <Paper>
+                                <div><ButtonNya
+                                    onKeyPressSayHello={onKeyPressSayHello}
+                                /></div>
+                            </Paper>
+                        </Grid>
+
+                        <Grid container xs={3}>
+                            <Paper>
+                                <div><span></span></div>
+                                <div><Checkbox/></div>
+                            </Paper>
+                        </Grid>
+                    </div>
+
+                    <Grid container xs={3}>
+                        <Paper>
+                            <div>
+                                {
+                                    people.map(el => <div>{el.name}</div>)
+                                }
+                            </div>
+                        </Paper>
+                    </Grid>
+                </Grid>
+            </Container>
         </div>
     )
 }
