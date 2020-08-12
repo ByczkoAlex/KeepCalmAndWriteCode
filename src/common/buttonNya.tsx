@@ -1,4 +1,4 @@
-import s from "../components/hi/Hi.module.css";
+import s from '../components/Prejunior/hi/Hi.module.css'
 import React, {ButtonHTMLAttributes, DetailedHTMLProps} from "react";
 
 type ButtonNyaPropsType = DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> &

@@ -1,0 +1,49 @@
+#reviews {
+    display: flex;
+    flex-flow: row wrap;
+}
+.comment {
+    max-width: 540px;
+    flex-basis: 50%;
+    margin-left: 50px;
+    margin-bottom: 25px;
+    padding-left: 53px;
+}
+.comment_bubble {
+    padding: 15px;
+    max-width: 470px;
+}
+.comment_bubble {
+    background: #181818;
+    position: relative;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    margin-left: 50px;
+}
+.comment_bubble:before {
+    content: "";
+    position: absolute;
+    right: 98%;
+    top: 203px;
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-right: 20px solid #181818;
+//border-bottom: 12px solid transparent;
+}
+
+.author {
+    font-size: 17px;
+    color: #800f80;
+    font-weight: bold;
+}
+
+.comment_text {
+    color: #fff;
+}
+
+.time {
+    color: #fff;
+    padding-left: 400px;
+}

@@ -1,5 +1,5 @@
 import React, {ChangeEvent, DetailedHTMLProps, InputHTMLAttributes,} from "react";
-import s from "../components/hi/Hi.module.css";
+import s from '../components/Prejunior/hi/Hi.module.css'
 
 type InputNyaPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
     & { onEnter?: () => void, error?: string,

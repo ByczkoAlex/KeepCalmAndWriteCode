@@ -1,10 +1,10 @@
 import React, {ChangeEvent, useState} from 'react';
 import s from './Hi.module.css'
-import {InputNya} from "../../common/inputNya";
-import {ButtonNya} from "../../common/buttonNya";
 import {v1} from "uuid";
-import {Checkbox} from "../../common/checkbox";
 import {Container, Grid, Paper} from "@material-ui/core";
+import {Checkbox} from "../../../common/checkbox";
+import {ButtonNya} from "../../../common/buttonNya";
+import {InputNya} from "../../../common/inputNya";
 
 export function Hello() {
 
@@ -71,11 +71,5 @@ export function Hello() {
         </div>
     )
 }
-
-
-
-
-
-
 
 
